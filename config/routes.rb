@@ -1,5 +1,6 @@
 Blog::Application.routes.draw do
   
+root :to => 'posts#index' 
 resources :posts do
     resources :comments, :only => [:create]
   end
@@ -9,7 +10,7 @@ resources :posts do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'welcome#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
