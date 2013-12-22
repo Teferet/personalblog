@@ -1,8 +1,10 @@
 Blog::Application.routes.draw do
   
+  
+resources :resume 
 root :to => 'posts#index' 
 resources :posts do
-    resources :comments, :only => [:create]
+    resources :comments, :only => [:create]   
   end
 
   get "welcome/index"
